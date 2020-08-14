@@ -15,6 +15,11 @@
                 type:String,
                 default:''
             }
+        },
+        methods:{
+            run(){
+                console.log('show-run');
+            }
         }
     }
 </script>

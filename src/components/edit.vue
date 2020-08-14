@@ -1,7 +1,7 @@
 <template>
     <div class="edit">
         <div class="edit-list">
-            <button>运行</button>
+            <button @click="$emit('run')">运行</button>
             <button>取消</button>
         </div>
         <!--对于原生标签，v-model 并不等于 input + value,内部会对输入法做处理 而且不同的标签，解析出的结果不一样-->

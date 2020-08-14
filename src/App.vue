@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <!--edit.$on('input',fn),我给我的组件订阅了input 的 fn 事件-->
-        <Edit @input="handleInput"/>
-        <Show :code="code"/>
+        <Edit @input="handleInput" @run="handleRun"/>
+        <Show :code="code" ref="show"/>
     </div>
 </template>
 
@@ -18,6 +18,10 @@
         methods:{
             handleInput(v){
                 this.code = v
+            },
+            handleRun(){
+                this.$refs.show.run();
+                console.log(this.$refs.show);
             }
         }
     };
